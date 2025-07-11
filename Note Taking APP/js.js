@@ -20,17 +20,24 @@ fileInput.addEventListener('change', (event) => {
                         let NotesText = e.target.result;
                         let NotesObj = JSON.parse(NotesText);
 
-                        NotesObj.notes.forEach((note, index) => {
+                        NotesObj.notes.forEach((note) => {
                                 const noteClone = noteTemplate.content.cloneNode(true);
 
                                 noteClone.querySelector(".note-name").textContent = note.name;
                                 noteClone.querySelector(".note-content").textContent = note.content;
 
+                                let output_tags = ""
+                                note.tags.forEach((tag) => {
+                                        output_tags = `${output_tags} #${tag}<br>`
+                                });
+
+                                noteClone.querySelector(".note-info-more").innerHTML = `id: ${note.id}<br><br>${note.creationDate}<br><br>${output_tags}`;
                                 noteSection.appendChild(noteClone)
                         });
                 } catch (err) {
                         console.error("Invalid JSON:", err);
                 }
+                fileInput.value = "";
         };
         reader.readAsText(JsonNotes)
 

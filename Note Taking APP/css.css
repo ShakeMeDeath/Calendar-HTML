@@ -34,6 +34,8 @@ body {
         font-family: Consolas;
         font-weight: bold;
         font-size: 1.4em;
+}.create-note-button{
+        margin-right: auto;
 }
 
 .note-section {
@@ -64,6 +66,7 @@ body {
 
 
 .note {
+        position: relative;
         flex-grow: 1;
         min-width: 30%;
         height: 42.5vh;
@@ -79,6 +82,7 @@ body {
         padding: 0 20px 0 20px;
         font-size: 1.2em;
         margin: 0;
+        opacity: 1;
 
 } .note-bar {
         padding: 0 20px 0 20px;
@@ -88,17 +92,51 @@ body {
         justify-content: space-between;
 
 } .note-bar-info-svg {
-        padding-right: 20px;
         width: 30px;
-        color: rgba(0, 0, 0, 0.15);
+        color: rgba(0, 0, 0, 0.20);
+        
+} .note-bar-info {
+        margin-right: 20px;
+        width: auto;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #F2F2F2;
+        opacity: 1;
+        z-index: 56;
+}
+.note-info-more {
+        position: absolute;
+        width: auto;
+        height: auto;
+        background-color: #F2F2F2;
+        border-radius: 20px;
+        inset: 0;
+        opacity: 0;
+        transition: 0.3s;
+        visibility: hidden;
+        padding: 20px;
+        color: rgba(0, 0, 0, 0.20);
+        font-size: 1.8em;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        user-select: none;
+}
+.note-bar-info:hover .note-info-more {
+        position: absolute;
+        visibility: visible;
+        transition: 0.3s;
+        opacity: 1;
+}
 
-} .del-note-btn {
+.del-note-btn {
         padding-left: 20px;
         width: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
-        color: rgba(0, 0, 0, 0.15);
+        color: rgba(0, 0, 0, 0.20);
 }
 .del-note-btn-svg{
         width: 100%;
