@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    flex-direction: column;
+    inset: 0;
+    overflow-y: hidden;
+}
+.Container {
+    padding: 25px;
+    width: 1067px;
+    height: auto;
+    border: black dashed 3px;
+    border-radius: 60px;
+    gap: 25px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    font-family: consolas;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY;
+    transition: 0.6s;
+}
+.days {
+    width: 125px;
+    height: 125px;
+    border-radius: 20px;
+    transition: 0.2s;
+    color: black;
+    font-size: 4em;
+    border: rgb(0, 0, 0, 0) solid 2px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    scale: 1;
+} .days:hover {
+    scale: 1.05;
+    transition: 0.2s;
+    border: rgb(0, 0, 0, 1) solid 2px;
+}
+
+.other-days {
+    width: 125px;
+    height: 125px;
+    border-radius: 20px;
+    border: #C7C9C7 solid 2px;
+    transition: 0.2s;
+    color: #C7C9C7;
+    font-size: 4em;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    scale: 1;
+} .other-days:hover {
+    border: black solid 2px;
+    color: black;
+    transition: 0.2s;
+    scale: 1.05;
+}
+
+sup {
+    font-size: 0.5em;
+}
+
+.current-day {
+    background-color: #fa3c3c;
+}
+
+.month-name {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Staatliches", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30em;
+    z-index: 0;
+    color: rgba(192, 192, 192, 0.5);
+    user-select: none;
+    z-index: -1;
+}

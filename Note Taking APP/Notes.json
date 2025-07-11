@@ -1,0 +1,64 @@
+{
+        "notes": [
+                {
+                        "id": "1",
+                        "name": "Note number one",
+                        "content": "hi im justin, get the fuck out of my house",
+                        "creationDate": "2023-06-12"
+                },
+                {
+                        "id": "2",
+                        "name": "Note number two",
+                        "content": "hi im robert, get the fuck out of my DAMN Property",
+                        "creationDate": "2023-07-25"
+                },
+                {
+                        "id": "3",
+                        "name": "Note number three",
+                        "content": "hi im Pepper, get the fuck out of my house",
+                        "creationDate": "2025-02-03"
+                },
+                {
+                        "id": "4",
+                        "name": "Note number four",
+                        "content": "hi im Rick, get the fuck out of my DAMN Property",
+                        "creationDate": "2021-12-25"
+                },
+                {
+                        "id": "5",
+                        "name": "Note number five",
+                        "content": "hi im Sam, get the fuck out of my DAMN Property",
+                        "creationDate": "2024-04-15"
+                },
+                {
+                        "id": "1",
+                        "name": "Note number one",
+                        "content": "hi im justin, get the fuck out of my house",
+                        "creationDate": "2023-06-12"
+                },
+                {
+                        "id": "2",
+                        "name": "Note number two",
+                        "content": "hi im robert, get the fuck out of my DAMN Property",
+                        "creationDate": "2023-07-25"
+                },
+                {
+                        "id": "3",
+                        "name": "Note number three",
+                        "content": "hi im Pepper, get the fuck out of my house",
+                        "creationDate": "2025-02-03"
+                },
+                {
+                        "id": "4",
+                        "name": "Note number four",
+                        "content": "hi im Rick, get the fuck out of my DAMN Property",
+                        "creationDate": "2021-12-25"
+                },
+                {
+                        "id": "5",
+                        "name": "Note number five",
+                        "content": "hi im Sam, get the fuck out of my DAMN Property",
+                        "creationDate": "2024-04-15"
+                }
+        ]
+}

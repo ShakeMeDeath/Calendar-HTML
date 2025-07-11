@@ -1,0 +1,107 @@
+body {
+        background: #262626;
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+.top-nav {
+        height: 70px;
+        width: calc(100vw - 40px);
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 0 30px 0 30px;
+        margin-bottom: 20px;
+        background-color: #262626;
+        gap: 20px;
+
+}.create-note-button, .import-note-button {
+        user-select: none;
+        border: none;
+        height: 70%;
+        background-color: #F2F2F2;
+        width:180px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 1px rgba(0,0,0,1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Consolas;
+        font-weight: bold;
+        font-size: 1.4em;
+}
+
+.note-section {
+        width: calc(100vw - 40px);
+        height: calc(100vh - 70px - 40px);
+
+        padding: 0 20px 20px;
+        gap: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        overflow-y: auto;
+        scrollbar-color: #F2F2F2 rgba(0, 0, 0, 0);
+} .note-section:not(:has(div))::after {
+        width: 100vw;
+        height: 100px;
+        position: absolute;
+        transform: translateX(-50%) translateY(-50%);
+        inset: 50%;
+        content: "No Notes :(";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Roboto", sans-serif;
+        font-size: 6em;
+        font-weight: 900;
+        color: rgba(0, 0, 0, 0.40);
+}
+
+
+.note {
+        flex-grow: 1;
+        min-width: 30%;
+        height: 42.5vh;
+        background-color: #F2F2F2;
+        box-shadow: 0px 0px 15px 1px rgba(0,0,0,1);
+        border-radius: 20px;
+        font-family: "Roboto", sans-serif;
+} .note-name {
+        font-weight: 700;
+        margin: 20px 0 20px 0;
+
+} .note-content {
+        padding: 0 20px 0 20px;
+        font-size: 1.2em;
+        margin: 0;
+
+} .note-bar {
+        padding: 0 20px 0 20px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+} .note-bar-info-svg {
+        padding-right: 20px;
+        width: 30px;
+        color: rgba(0, 0, 0, 0.15);
+
+} .del-note-btn {
+        padding-left: 20px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba(0, 0, 0, 0.15);
+}
+.del-note-btn-svg{
+        width: 100%;
+        height: 100%;
+
+}

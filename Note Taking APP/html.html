@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <title>Document</title>
+</head>
+<body>
+        <div class="top-nav">
+                <button class="create-note-button">
+                        Create Note
+                </button>
+                <button class="import-note-button">
+                        Import Notes
+                </button>
+                <input type="file" id="FileImport" accept=".json" style="display: none;" />
+        </div>
+        <div class="note-section">
+        </div>
+</body>
+
+<template id="note-template">
+        <div class="note">
+                <div class="note-bar">
+                        <svg class="note-bar-info-svg" viewBox="0 0 16 16" fill="currentcolor"><path fill="currentcolor" d="M8,0 C12.4183,0 16,3.58173 16,8 C16,12.4183 12.4183,16 8,16 C3.58167,16 0,12.4183 0,8 C0,3.58173 3.58167,0 8,0 Z M8,2 C4.68628,2 2,4.68628 2,8 C2,11.3137 4.68628,14 8,14 C11.3137,14 14,11.3137 14,8 C14,4.68628 11.3137,2 8,2 Z M8,7 C8.51280357,7 8.93550255,7.38604429 8.99327177,7.88337975 L9,8 L9,11 C9,11.5523 8.55225,12 8,12 C7.48719643,12 7.06449745,11.613973 7.00672823,11.1166239 L7,11 L7,8 C7,7.44772 7.44775,7 8,7 Z M8,4 C8.55225,4 9,4.44772 9,5 C9,5.55228 8.55225,6 8,6 C7.44775,6 7,5.55228 7,5 C7,4.44772 7.44775,4 8,4 Z"></path></svg>
+                        <h1 class="note-name">Note Name here</h1>
+                        <div class="del-note-btn" type="button">
+                                <svg class="del-note-btn-svg" fill="currentcolor" viewBox="0 0 32 32"><path d="M18.8,16l5.5-5.5c0.8-0.8,0.8-2,0-2.8l0,0C24,7.3,23.5,7,23,7c-0.5,0-1,0.2-1.4,0.6L16,13.2l-5.5-5.5 c-0.8-0.8-2.1-0.8-2.8,0C7.3,8,7,8.5,7,9.1s0.2,1,0.6,1.4l5.5,5.5l-5.5,5.5C7.3,21.9,7,22.4,7,23c0,0.5,0.2,1,0.6,1.4 C8,24.8,8.5,25,9,25c0.5,0,1-0.2,1.4-0.6l5.5-5.5l5.5,5.5c0.8,0.8,2.1,0.8,2.8,0c0.8-0.8,0.8-2.1,0-2.8L18.8,16z"></path></svg>
+                        </div>
+                </div>
+                <p class="note-content">Note content here</p>
+        </div>
+</template>
+
+<script src="js.js"></script>
+</html>
