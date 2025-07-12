@@ -1,5 +1,12 @@
+:root {
+        --light-accent-color: hsl(from var(--accent-color) h calc(s + 120) l);
+        --accent-color: #518DFC;
+        --dark-color: #262626;
+        --light-color: #f2f2f2;
+}
+
 body {
-        background: #262626;
+        background: var(--dark-color);
         margin: 0;
         width: 100vw;
         height: 100vh;
@@ -7,6 +14,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        font-family: "Roboto", sans-serif;
 }
 
 .top-nav {
@@ -17,24 +25,27 @@ body {
         align-items: flex-end;
         padding: 0 30px 0 30px;
         margin-bottom: 20px;
-        background-color: #262626;
+        background-color: var(--dark-color);
         gap: 20px;
-
-}.create-note-button, .import-note-button {
+}
+.create-note-button, .import-note-button {
         user-select: none;
         border: none;
         height: 70%;
-        background-color: #F2F2F2;
-        width:180px;
+        background-color: var(--light-color);
+        width: 180px;
         border-radius: 10px;
-        box-shadow: 0px 0px 10px 1px rgba(0,0,0,1);
+        box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 1);
         display: flex;
         justify-content: center;
         align-items: center;
         font-family: Consolas;
         font-weight: bold;
         font-size: 1.4em;
-}.create-note-button{
+}
+.create-note-button {
+        color: var(--light-color);
+        background-color: var(--accent-color);
         margin-right: auto;
 }
 
@@ -47,8 +58,9 @@ body {
         display: flex;
         flex-wrap: wrap;
         overflow-y: auto;
-        scrollbar-color: #F2F2F2 rgba(0, 0, 0, 0);
-} .note-section:not(:has(div))::after {
+        scrollbar-color: var(--light-color) rgba(0, 0, 0, 0);
+}
+.note-section:not(:has(div))::after {
         width: 100vw;
         height: 100px;
         position: absolute;
@@ -61,63 +73,62 @@ body {
         font-family: "Roboto", sans-serif;
         font-size: 6em;
         font-weight: 900;
-        color: rgba(0, 0, 0, 0.40);
+        color: rgba(0, 0, 0, 0.4);
 }
-
 
 .note {
         position: relative;
         flex-grow: 1;
         min-width: 30%;
         height: 42.5vh;
-        background-color: #F2F2F2;
-        box-shadow: 0px 0px 15px 1px rgba(0,0,0,1);
+        background-color: var(--light-color);
+        box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 1);
         border-radius: 20px;
         font-family: "Roboto", sans-serif;
-} .note-name {
+}
+.note-name {
         font-weight: 700;
         margin: 20px 0 20px 0;
-
-} .note-content {
+}
+.note-content {
         padding: 0 20px 0 20px;
         font-size: 1.2em;
         margin: 0;
         opacity: 1;
-
-} .note-bar {
+}
+.note-bar {
         padding: 0 20px 0 20px;
         height: auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
-
-} .note-bar-info-svg {
+}
+.note-bar-info-svg {
         width: 30px;
-        color: rgba(0, 0, 0, 0.20);
-        
-} .note-bar-info {
+        color: rgba(0, 0, 0, 0.2);
+}
+.note-bar-info {
         margin-right: 20px;
         width: auto;
         height: 40px;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #F2F2F2;
+        background-color: var(--light-color);
         opacity: 1;
-        z-index: 56;
 }
 .note-info-more {
         position: absolute;
         width: auto;
         height: auto;
-        background-color: #F2F2F2;
+        background-color: var(--light-color);
         border-radius: 20px;
         inset: 0;
         opacity: 0;
         transition: 0.3s;
         visibility: hidden;
         padding: 20px;
-        color: rgba(0, 0, 0, 0.20);
+        color: rgba(0, 0, 0, 0.2);
         font-size: 1.8em;
         font-family: "Roboto", sans-serif;
         font-weight: 500;
@@ -136,10 +147,115 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        color: rgba(0, 0, 0, 0.20);
+        color: rgba(0, 0, 0, 0.2);
 }
-.del-note-btn-svg{
+.del-note-btn-svg {
         width: 100%;
         height: 100%;
+}
+.dimBackground {
+        position: absolute;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        transform: translate(0% -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.menuContainer {
+        width: 50vw;
+        height: 70vh;
+        background-color: var(--light-color);
+        border-radius: 30px;
+        box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 1);
+        padding: 30px;
+        overflow-y: auto;
+        scrollbar-color: var(--light-color) rgba(0, 0, 0, 0);
+        font-family: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        font-size: 1.5em;
+}
+.menuContainer h1 {
+        margin: 0;
+}
 
+.titleNoteInput {
+        background-color: var(--light-color);
+        resize: none;
+        outline: none;
+        border: none;
+        width: 99%;
+        height: 15%;
+        font-size: 2em;
+        text-align: center;
+}
+.textNoteInput {
+        background-color: var(--light-color);
+        font-family: inherit;
+        font-size: 1.2em;
+        resize: none;
+        border: none;
+        outline: none;
+        width: 99%;
+        height: 65%;
+        scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0);
+}
+.noteBottomBar {
+        width: 99%;
+        height: 20%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+}
+.noteCancelBtn {
+        user-select: none;
+        width: 20%;
+        height: 40%;
+        border: var(--accent-color) solid 3px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+        font-family: inherit;
+        font-weight: 700;
+        color: var(--accent-color);
+        background-color: var(--light-color);
+        transition: 0.2s;
+}
+.noteCancelBtn:hover {
+        color: var(--light-color);
+        transition: 0.2s;
+        background-color: var(--light-accent-color);
+        border: var(--light-accent-color) solid 3px;
+        transition: 0.2s;
+        transform: scale(1.05);
+}
+
+.noteCreateBtn {
+        user-select: none;
+        width: 20%;
+        height: 40%;
+        background-color: var(--accent-color);
+        border: var(--accent-color) solid 3px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+        font-family: inherit;
+        font-weight: 700;
+        transition: 0.2s;
+        color: var(--light-color);
+}
+.noteCreateBtn:hover {
+        background-color: var(--light-accent-color);
+        border: var(--light-accent-color) solid 3px;
+        transition: 0.2s;
+        transform: scale(1.05);
 }

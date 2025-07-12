@@ -9,12 +9,12 @@
 </head>
 <body>
         <div class="top-nav">
-                <button class="create-note-button">
-                        Create Note
-                </button>
-                <button class="import-note-button">
+                <div type="button" class="create-note-button">
+                        Add Note +
+                </div type="button">
+                <div type="button" class="import-note-button">
                         Import Notes
-                </button>
+                </div type="button">
                 <input type="file" id="FileImport" accept=".json" style="display: none;" />
         </div>
         <div class="note-section">
@@ -34,6 +34,19 @@
                         </div>
                 </div>
                 <p class="note-content">Note content here</p>
+        </div>
+</template>
+
+<template id="menu-template">
+        <div class="dimBackground">
+                <div class="menuContainer">
+                        <textarea class="titleNoteInput" name="note" minlength="1" maxlength="30" placeholder="Type Name ..."></textarea>
+                        <textarea class="textNoteInput" name="note" placeholder="Type content ..."></textarea>
+                        <div class="noteBottomBar">
+                                <div type="button" class="noteCancelBtn">Cancel</div>
+                                <div type="button" class="noteCreateBtn">Create</div>
+                        </div>
+                </div>
         </div>
 </template>
 
